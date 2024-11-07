@@ -271,51 +271,51 @@ function filterMenu() {
 async function getMealsByCategory(category) {
     if (category.toLowerCase() === 'chinese') {
         return [
-            { strMeal: "Kung Pao Chicken", strMealThumb: "Images/chinesefood/image.png", idMeal: "a1" },
-            { strMeal: "Mapo Tofu", strMealThumb: "Images/chinesefood/download (3).jpeg", idMeal: "c2" },
-            { strMeal: "Dim Sum", strMealThumb: "Images/chinesefood/download (4).jpeg", idMeal: "c3" },
-            { strMeal: "Peking Duck", strMealThumb: "Images/chinesefood/download (5).jpeg", idMeal: "c4" },
-            { strMeal: "Hot and Sour Soup", strMealThumb: "Images/chinesefood/download (6).jpeg", idMeal: "c5" },
-            { strMeal: "Spring Rolls", strMealThumb: "Images/chinesefood/download (7).jpeg", idMeal: "c6" },
+            { strMeal: "Kung Pao Chicken", strMealThumb: "../Images/chinesefood/image.png", idMeal: "a1" },
+            { strMeal: "Mapo Tofu", strMealThumb: "../Images/chinesefood/download (3).jpeg", idMeal: "c2" },
+            { strMeal: "Dim Sum", strMealThumb: "../Images/chinesefood/download (4).jpeg", idMeal: "c3" },
+            { strMeal: "Peking Duck", strMealThumb: "../Images/chinesefood/download (5).jpeg", idMeal: "c4" },
+            { strMeal: "Hot and Sour Soup", strMealThumb: "../Images/chinesefood/download (6).jpeg", idMeal: "c5" },
+            { strMeal: "Spring Rolls", strMealThumb: "../Images/chinesefood/download (7).jpeg", idMeal: "c6" },
         ];
     }
     if (category.toLowerCase() === 'appetizers') {
         return [
-            { strMeal: "Mozzarella sticks", strMealThumb: "Images/Appetizers/app1.jpg", idMeal: "c1" },
-            { strMeal: "Melon moji", strMealThumb: "Images/Appetizers/app2.jpg", idMeal: "c2" },
-            { strMeal: "Springroll", strMealThumb: "Images/Appetizers/app3.png", idMeal: "c3" },
-            { strMeal: "Green bean fries", strMealThumb: "Images/Appetizers/app4.2.jpg", idMeal: "c4" },
-            { strMeal: "Fries shrimp", strMealThumb: "Images/Appetizers/app5.jpg", idMeal: "c5" },
+            { strMeal: "Mozzarella sticks", strMealThumb: "../Images/Appetizers/app1.jpg", idMeal: "c1" },
+            { strMeal: "Melon moji", strMealThumb: "../Images/Appetizers/app2.jpg", idMeal: "c2" },
+            { strMeal: "Springroll", strMealThumb: "../Images/Appetizers/app3.png", idMeal: "c3" },
+            { strMeal: "Green bean fries", strMealThumb: "../Images/Appetizers/app4.2.jpg", idMeal: "c4" },
+            { strMeal: "Fries shrimp", strMealThumb: "../Images/Appetizers/app5.jpg", idMeal: "c5" },
         ];
     }
  if (category.toLowerCase() === 'beverage') {
             return [
-                { strMeal: "Americano", strMealThumb: "Images/Beverages/americano.jpeg", idMeal: "c1" },
-                { strMeal: "Coffee", strMealThumb: "Images/Beverages/coffee.jpg", idMeal: "c2" },
-                { strMeal: "Expresso", strMealThumb: "Images/Beverages/expresso.jpg", idMeal: "c3" },
-                { strMeal: "Latte", strMealThumb: "Images/Beverages/latte.jpg", idMeal: "c4" },
-                { strMeal: "Softdrink", strMealThumb: "Images/Beverages/softdrink.jpg", idMeal: "c5" },
-                { strMeal: "Smoothie", strMealThumb: "Images/Beverages/Smoothie.jpg", idMeal: "c6" },
+                { strMeal: "Americano", strMealThumb: "../Images/Beverages/americano.jpeg", idMeal: "c1" },
+                { strMeal: "Coffee", strMealThumb: "../Images/Beverages/coffee.jpg", idMeal: "c2" },
+                { strMeal: "Expresso", strMealThumb: "../Images/Beverages/expresso.jpg", idMeal: "c3" },
+                { strMeal: "Latte", strMealThumb: "../Images/Beverages/latte.jpg", idMeal: "c4" },
+                { strMeal: "Softdrink", strMealThumb: "../Images/Beverages/softdrink.jpg", idMeal: "c5" },
+                { strMeal: "Smoothie", strMealThumb: "../Images/Beverages/Smoothie.jpg", idMeal: "c6" },
             ];
         }
         if (category.toLowerCase() === 'steak') {
             return [
-                { strMeal: "Chicken steak", strMealThumb: "Images/steak/ChickenSteak.jpg", idMeal: "c1" },
-                { strMeal: "Spicy Chicken Steak", strMealThumb: "Images/steak/spicychicken.jpg", idMeal: "c2" },
-                { strMeal: "Pork Chop", strMealThumb: "Images/steak/porkchop.jpg", idMeal: "c3" },
-                { strMeal: "Pork Rib-Eye", strMealThumb: "Images/steak/porkrib.jpg", idMeal: "c4" },
-                { strMeal: "Ribeye Steaks", strMealThumb: "Images/steak/ribeye.jpg", idMeal: "c5" },
-                { strMeal: "T-Bone Steaks", strMealThumb: "Images/steak/Tbone.jpg", idMeal: "c6" },
+                { strMeal: "Chicken steak", strMealThumb: "../Images/steak/ChickenSteak.jpg", idMeal: "c1" },
+                { strMeal: "Spicy Chicken Steak", strMealThumb: "../Images/steak/spicychicken.jpg", idMeal: "c2" },
+                { strMeal: "Pork Chop", strMealThumb: "../Images/steak/porkchop.jpg", idMeal: "c3" },
+                { strMeal: "Pork Rib-Eye", strMealThumb: "../Images/steak/porkrib.jpg", idMeal: "c4" },
+                { strMeal: "Ribeye Steaks", strMealThumb: "../Images/steak/ribeye.jpg", idMeal: "c5" },
+                { strMeal: "T-Bone Steaks", strMealThumb: "../Images/steak/Tbone.jpg", idMeal: "c6" },
             ];
         }
         if (category.toLowerCase() === 'thai') {
             return [
-                { strMeal: "แกงเขียวหวาน", strMealThumb: "Images/Thai/แกงเขียวหวาน.jpeg", idMeal: "c1" },
-                { strMeal: "แกงมัสมั่น", strMealThumb: "Images/Thai/แกงมัสมั่น.jpg", idMeal: "c2" },
-                { strMeal: "ข้าวซอย", strMealThumb: "Images/Thai/ข้าวซอย.jpg", idMeal: "c3" },
-                { strMeal: "ต้มยำกุ้ง", strMealThumb: "Images/Thai/ต้มยำกุ้ง.jpg", idMeal: "c4" },
-                { strMeal: "ผัดไทยกุ้งสด", strMealThumb: "Images/Thai/ผัดไทยกุ้งสด.jpg", idMeal: "c5" },
-                { strMeal: "ส้มตำ", strMealThumb: "Images/Thai/ส้มตำ.jpg", idMeal: "c6" },
+                { strMeal: "แกงเขียวหวาน", strMealThumb: "../Images/Thai/แกงเขียวหวาน.jpeg", idMeal: "c1" },
+                { strMeal: "แกงมัสมั่น", strMealThumb: "../Images/Thai/แกงมัสมั่น.jpg", idMeal: "c2" },
+                { strMeal: "ข้าวซอย", strMealThumb: "../Images/Thai/ข้าวซอย.jpg", idMeal: "c3" },
+                { strMeal: "ต้มยำกุ้ง", strMealThumb: "../Images/Thai/ต้มยำกุ้ง.jpg", idMeal: "c4" },
+                { strMeal: "ผัดไทยกุ้งสด", strMealThumb: "../Images/Thai/ผัดไทยกุ้งสด.jpg", idMeal: "c5" },
+                { strMeal: "ส้มตำ", strMealThumb: "../Images/Thai/ส้มตำ.jpg", idMeal: "c6" },
             ];
         }
      else {
