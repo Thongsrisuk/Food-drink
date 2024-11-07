@@ -1,0 +1,191 @@
+.navbar{
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlink{
+    display: flex;
+    padding-right: 30px;
+}
+.nav-ex{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 1rem;
+}
+.search{
+    position: relative;
+    width: 20vw;
+    min-width: 150px;
+    height: 2.5rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.search-box{
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    border: none;
+    outline: none;
+    font-size: .9rem;
+}
+.search-btn{
+    position: absolute;
+    border: none;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    background: #f0f0f0;
+    color: #000000;
+}
+.navlink ul li{
+display: inline-block;
+padding-right: 30px;
+cursor: pointer;
+}
+.navlink ul li a{
+    font-size: clamp(1rem, 1.25vw, 2rem);
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    cursor: pointer;
+}
+.navbutton::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+.navbutton:hover::after{
+    width: 100%;
+}
+.navbutton:hover{
+    color: aqua;
+}
+
+
+
+/**.search:hover{
+width: 70px;
+}*/
+.search{
+    font-weight: 500;
+    transition: 0.8s;
+    background: white;
+}
+
+.welcome{
+    font-size: 2rem;
+    margin-top: -45px;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0),rgb(94, 89, 70)), url(../images/cafe.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.welcome img{
+    margin: auto;
+    padding-inline: 50px;
+    width: 25%;
+    border-radius: 50%;
+    
+    
+}
+.appetizers img, .promotion img, .mains img, .beverages img{
+    width: 25vw;
+    border-radius: 15%;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+}
+.promotion h1{
+    padding-top: 15px;
+    text-align: center;
+}
+.promotion ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.appetizers h1{
+    padding-top: 15px;
+    text-align: center;
+}
+.appetizers ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.mains h1{
+    padding-top: 15px;
+    text-align: center;
+}
+.mains ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.beverages h1{
+    padding-top: 15px;
+    text-align: center;
+}
+.beverages ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.fooddemo{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.fooddemo p{
+    margin-top: 0;
+}
+.fooddemo a{
+    position: relative;
+    float: right;
+    top: -50px;
+}
+/* Text */
+h2{
+    background-color: black;
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.5rem;
+}
+/*media*/
+@media (max-width: 768px) {
+.appetizers img, .promotion img, .mains img, .beverages img{
+    width: 15vw;
+}
+p{
+    font-size: 1rem;
+}
+h1{
+    font-size: 1.5rem;
+}
+.navbar{
+    height: 8rem;
+}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/bb7ef3ecf1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+  <div class="form-container">
+    <h1 id="title">Sign in</h1>
+    <form id="login-form" >
+        <div class="form-group" id="nametext">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="login-name" name="username" placeholder="Enter your name" required autocomplete="off">
+          </div>
+    <div class="form-group" id="mailtext">
+        <i class="fa-solid fa-envelope"></i>
+    <input class="gmail" id="login-email" type="email" placeholder="your@gmail.com" name="email" required>
+</div>
+
+<div class="form-group" id="passtext">
+    <i class="fa-solid fa-lock"></i>
+    <input type="password" id="login-password" name="password" placeholder="password" required>
+</div>
+   <div class="button">
+   <br> <p >sign up with us today get 20 ฿ off every Menu!</p> <br>
+    <button type="submit"  onClick="validateLogin()" id="BTNsublog" class="submit-btn">Login</button>
+    <a class="link" href='signup.html'><button class="back" type="button">Sign up</button></a>
+</form>
+</div> 
+</body>
+<script>
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('login-name').value;
+         alert("Login successful");
+         localStorage.setItem("username", username);
+         window.location.href ="index.html";              
+        
+    });
+</script>
+<script src="js/name.js"></script>
+</html>

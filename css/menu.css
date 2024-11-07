@@ -1,0 +1,536 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/*color code*/
+:root {
+    --background-color: white;
+    --text-color: black;
+    --primary-color: rgb(204, 12, 12);
+    --secondary-color: rgb(177, 0, 0);
+    --tertiary-color: orangered;
+    --container-bg: rgb(224, 224, 252);
+    --filter-bg: transparent;
+    --contact-bg: rgb(208, 50, 50);
+    --button-bg: #ec0f25e3;
+    --button-hover-bg: rgba(208, 50, 50, 0.9);
+    --card-border: rgb(186, 186, 201);
+    --card-shadow: rgba(224, 224, 252, 0.678);
+    --link-color: rgb(177, 0, 0);
+    --pagination-bg: white;
+    --pagination-active-bg: rgb(177, 0, 0);
+    --pagination-btn-color: rgb(177, 0, 0);
+    --pagination-prev-next-bg: rgb(204, 12, 12);
+    --filter-text-color: black;
+    --filter-border-color: #dc3545;
+}
+
+.navbar{
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlink{
+    display: flex;
+    padding-right: 30px;
+}
+.nav-ex{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 1rem;
+}
+
+.navlink ul li{
+display: inline-block;
+padding-right: 30px;
+cursor: pointer;
+}
+.navlink ul li a{
+    font-size: clamp(1rem, 1.25vw, 2rem);
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    cursor: pointer;
+}
+.navbutton::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+.navbutton:hover::after{
+    width: 100%;
+}
+.navbutton:hover{
+    color: aqua;
+}
+
+@media (max-width: 768px){
+.navbar .nav-link{
+	font-size: 0.8rem;
+	color: #000000;
+}
+}
+/* MENU + LOGIN + SIGNUP + CONTACT PAGE */
+.head_container {
+	margin-top: 66px;
+}
+
+.head_container::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../Images/Thai/แกงเขียวหวาน.jpeg);
+	background-size:cover;
+	opacity: 0.5;
+	z-index: -1;
+}
+
+.head_container .mainhead {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.head_container .mainhead h1 {
+	font-family: "Bree Serif", serif;
+	font-size: 3.8rem;
+	color: rgb(0, 0, 0);
+	font-weight: 700;
+	letter-spacing: 5px;
+}
+
+/* MENU PAGE SPECIFICS */
+.menu-container {
+	padding: 55px 10px 30px 10px;
+	background-color: var(--background-color)
+}
+
+.menu-container .container-fluid {
+	width: 80%;
+}
+
+@media screen and (width>=360px) and (width<=576px) {
+	.menu-container .container-fluid {
+		width: 60%;
+	}
+}
+
+@media screen and (width < 360px) {
+	.menu-container .container-fluid {
+		width: 100%;
+	}
+}
+
+.menu-container .nav-pills {
+	padding-bottom: 50px;
+}
+
+.menu-container .nav-pills button {
+	padding: 0.5rem 0.3rem;
+	text-transform: uppercase;
+	border-radius: 20px;
+}
+
+.menu-container .nav-pills .nav-link {
+	color: rgb(5, 5, 5);
+}
+
+.menu-container .nav-pills .nav-link.active {
+	background-color: rgb(204, 12, 12);
+	/* color: white; */
+}
+
+.menu-items .row {
+	align-items: stretch;
+}
+
+.menu-items .card {
+	height: 100%;
+	background:  rgb(204, 12, 12);
+	border: 1px solid rgb(186, 186, 201);
+	border-radius: 20px;
+	text-align: center;
+	font-family: "Bree Serif", serif;
+	transition: all 0.4s linear;
+}
+
+.menu-items .card:hover {
+	box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
+	color: black;
+	transform: translateY(-5px);
+}
+
+.menu-items .card-thumbnail img {
+	object-fit: cover;
+	width: 100%;
+	aspect-ratio: 7/5;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.menu-items .black-overlay:before {
+	content: "";
+	width: 100%;
+	aspect-ratio: 7/5;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.244);
+	visibility: hidden;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.4s linear;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.menu-items .card .btn {
+	position: absolute;
+	left: 21%;
+	top: 26%;
+	width: 60%;
+	font-size: 1.1rem;
+	padding: 3px 0;
+	border: 1.3px solid orangered;
+	border-radius: 10px;
+	font-family: "Bree Serif", serif;
+	background-color: orangered;
+	color: white;
+	transition: all 0.3s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1000;
+}
+
+.menu-items .card:hover .card-thumbnail .btn {
+	visibility: visible;
+	opacity: 1;
+}
+
+.menu-items .card .btn:hover {
+	border: 1.3px solid orangered;
+	background-color: white;
+	color: orangered;
+}
+
+.menu-items .card:hover .card-thumbnail .black-overlay:before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.menu-items .card h3 {
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.menu-items .card p {
+	margin-bottom: 0.5rem;
+}
+
+.menu-items .pagination {
+	padding-top: 1.5rem;
+}
+
+.menu-items .pagination li {
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+
+.menu-items .pagination .btn {
+	border-radius: 50%;
+	font-size: 1.1rem;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	font-weight: 600;
+	color: rgb(177, 0, 0);
+}
+
+.menu-items .pagination .btn.active {
+	border: 2px solid rgb(177, 0, 0);
+}
+
+.menu-items .pagination .btn.prev,
+.menu-items .pagination .btn.next {
+	background-color: rgb(204, 12, 12);
+	border-color: rgb(204, 12, 12);
+	color: white;
+}
+
+.menu-items .pagination .btn.prev:is(:hover, :focus),
+.menu-items .pagination .btn.next:is(:hover, :focus) {
+	background-color: rgb(177, 0, 0);
+	border-color: rgb(177, 0, 0);
+	box-shadow: 0px 5px 5px rgba(177, 0, 0, 0.429);
+}
+
+.filter_container {
+	text-align: center;
+	margin: 20px 0;
+	color: aliceblue;
+	background-color: transparent;
+}
+
+.filter_container h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.filter_container .filters {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.filter_container label {
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+.filter_container select {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	outline: none;
+	transition: border-color 0.3s ease;
+}
+
+.filter_container select:hover,
+.filter_container select:focus {
+	border-color: #dc3545;
+}
+
+.filter_container button {
+	padding: 10px 20px;
+	background-color: #dc3545;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.filter_container button:hover {
+	background-color: #dc3545;
+}
+
+@media (max-width: 768px) {
+	.filter_container .filters {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.filter_container label,
+	.filter_container select,
+	.filter_container button {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.filter_container button {
+		margin-top: 10px;
+	}
+}
+
+/* CONTACT US PAGE */
+
+.card{
+	color: #fff;
+	padding: 7%;
+	box-shadow: 0px 2px 10px #00000056;
+	background-color: rgb(208, 50, 50);
+	box-shadow: 0px 10px 50px #000000a4;
+	width: 90%;
+}
+
+.btn-submit {
+	width: 90%;
+	padding: 16px 0;
+	margin: 20px;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: black;
+	background: #fff;
+	transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+	background: #fff;
+	box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.663);
+}
+
+.textfield {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	margin: 20px 0px;
+	position: relative;
+}
+
+.textfield>label {
+	font-weight: bold;	
+	margin-bottom: 5px;
+}
+
+.textfield>input , .textfield>textarea{
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	padding: 15px;
+	background: #E6E6FA;
+	color: #030707de;
+	font-size: 12pt;
+	box-shadow: 0px 2px 5px #00000056;
+	outline: none;
+	border: 1px solid #ddd;
+}
+
+.textfield>input::placeholder, .textfield>textarea::placeholder {
+	color: #000000;
+}
+
+.textfield>input:hover, .textfield>textarea:hover {
+	background: #fff;
+	box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.663);
+}
+
+.first_cont .items p {
+	margin-bottom: 20px;
+}
+
+.nav-link {
+	color:var(--a)
+}
+
+
+/* Cart page styling */
+.cart-section {
+	padding: 55px 70px 30px 70px;
+	background-color: rgb(224, 224, 252);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cart {
+	width: 80%;
+	background-color: #f2f2f2;
+	text-align: center;
+	font-family: "Bree Serif", serif;
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+}
+
+
+.star-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #ccc;
+	font-size: 15px;
+	padding: 0;
+}
+
+.star-button:hover,
+.star-button:focus {
+	color: #f1c40f;
+	
+	outline: none;
+}
+
+.star-button.rated {
+	color: #f1c40f;
+	
+}
+
+.star-button.hover {
+	color: #f1c40f;
+	
+}
+
+.star-button.greyed {
+	color: #ccc;
+	
+}
+
+.menu_items .items img:hover {
+	transform: scale(1.1);
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+.menu_items .items img {
+	transition: 3s, 1s ease-in-out;
+}
+
+.img-fluid{
+	width:400px;
+	margin-right:150px;
+	transition: width 0.15s;
+}
+.img-fluid:hover{
+	width:450px;
+}
+
+  /* added */
+  .menu-items .card {
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.menu-items .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0 10px rgba(224, 224, 252, 0.678); 
+}
+.menu-items .card .btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-items .card .btn:hover {
+    background-color: white; 
+    color: orangered; 
+    border-color: orangered; 
+}
+.menu-items .card-thumbnail img {
+    
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.menu-items .card-thumbnail img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-items .items .caption {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.menu-items .items .caption:hover {
+    color: orangered;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+  
