@@ -310,12 +310,12 @@ async function getMealsByCategory(category) {
         }
         if (category.toLowerCase() === 'thai') {
             return [
-                { strMeal: "แกงเขียวหวาน", strMealThumb: "Images/Thai/แกงเขียวหวาน.jpeg", idMeal: "c1" },
-                { strMeal: "แกงมัสมั่น", strMealThumb: "Images/Thai/แกงมัสมั่น.jpg", idMeal: "c2" },
-                { strMeal: "ข้าวซอย", strMealThumb: "Images/Thai/ข้าวซอย.jpg", idMeal: "c3" },
-                { strMeal: "ต้มยำกุ้ง", strMealThumb: "Images/Thai/ต้มยำกุ้ง.jpg", idMeal: "c4" },
-                { strMeal: "ผัดไทยกุ้งสด", strMealThumb: "Images/Thai/ผัดไทยกุ้งสด.jpg", idMeal: "c5" },
-                { strMeal: "ส้มตำ", strMealThumb: "Images/Thai/ส้มตำ.jpg", idMeal: "c6" },
+                { strMeal: "แกงเขียวหวาน", strMealThumb: "Thai/แกงเขียวหวาน.jpeg", idMeal: "c1" },
+                { strMeal: "แกงมัสมั่น", strMealThumb: "Thai/แกงมัสมั่น.jpg", idMeal: "c2" },
+                { strMeal: "ข้าวซอย", strMealThumb: "Thai/ข้าวซอย.jpg", idMeal: "c3" },
+                { strMeal: "ต้มยำกุ้ง", strMealThumb: "Thai/ต้มยำกุ้ง.jpg", idMeal: "c4" },
+                { strMeal: "ผัดไทยกุ้งสด", strMealThumb: "Thai/ผัดไทยกุ้งสด.jpg", idMeal: "c5" },
+                { strMeal: "ส้มตำ", strMealThumb: "/Thai/ส้มตำ.jpg", idMeal: "c6" },
             ];
         }
      else {
