@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="f2.webp" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database-compat.js"></script>
+    <script src="https://kit.fontawesome.com/bb7ef3ecf1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/user.js" type="module" defer></script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>SignUp</h1>
+        <form  id="signup-form">
+            <div class="form-group" id="nametext">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="signup-name" name="name" placeholder="Enter your name" required autocomplete="off">
+          </div>
+          <div class="form-group" id="mailtext">
+            <i class="fa-solid fa-envelope"></i>
+        <input class="gmail" id="signup-email" type="email" placeholder="your@gmail.com" name="email" required>
+    </div>
+          <div class="form-group" id="phonetext">
+            <i class="fa-solid fa-phone"></i>
+        <input class="phone" id="signup-tel" type="number" inputmode="numeric" name="phone" placeholder="012-123-1212" required >
+        </div>
+          <div class="form-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="signup-password" name="password" placeholder="password" required>
+          </div>
+          <button type="submit" id="BTNsubsign" class="submit-btn">Submit</button>
+          <a href="login.html"><button class="back" type="button">Go back</button></a>
+        </form>
+      </div>
+    
+      <script>
+		
+        // Your web app's Firebase configuration
+    
+      const firebaseConfig = {
+        apiKey: "AIzaSyA4aGu_CP0hIzbT_ROq08RosRmlzx_7z1A",
+        authDomain: "voralopsale.firebaseapp.com",
+        databaseURL: "https://voralopsale-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "voralopsale",
+        storageBucket: "voralopsale.appspot.com",
+        messagingSenderId: "566980337173",
+        appId: "1:566980337173:web:c5cd3e6981ff7507ebf81c",
+        measurementId: "G-SPH7N01KED"
+    
+    };
+    
+        // // Initialize Firebase
+        
+    
+    
+      </script>
+      <script>
+     
+     firebase.initializeApp(firebaseConfig);
+    
+        // Sign up with email and password
+         document.getElementById('signup-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const auth = firebase.auth();
+        const db = firebase.database();
+        const name = document.getElementById('signup-name').value;
+        const email = document.getElementById('signup-email').value;
+        const phone = document.getElementById('signup-tel').value;
+         const password = document.getElementById('signup-password').value;
+    
+        auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+    
+            // Save user info to Realtime Database
+            return db.ref('users/' + user.uid).set({
+              name: name,
+              email: email,
+              tel: phone,
+              password: password
+            }); 
+          })
+          .then(() => {
+            alert('User registered successfully!');
+            const username = document.getElementById('signup-name').value;
+            localStorage.setItem("username", username);
+            window.location.href = 'index.html'; // Redirect to homepage or login page
+          })
+          .catch((error) => {
+            console.error('Error signing up:', error);
+            alert(error.message);
+          });
+      });
+</script>
+<script src="js/name.js"></script>
+</body>
+</html>
