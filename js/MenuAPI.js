@@ -6,11 +6,11 @@ let categories = [
     "Breakfast",
     "appetizers",
     "thai",
+    "chinese",
     "Steak",
-    "dessert",
     "chicken",
     "seafood",
-    "chinese",
+    "dessert",
     "beverage"
 ];
 
