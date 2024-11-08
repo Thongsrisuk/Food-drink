@@ -159,7 +159,7 @@ const applyFirstTimeDiscount = () => {
 
     }
     document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30 BATH off!`;
-    document.querySelector(".coupen-inner").innerHTML = `Congratulations! Your coupon code is ${couponCode}. You've received a 30 BATH discount on your first .`;
+    document.querySelector(".coupen-inner").innerHTML = `Congratulations! Your coupon code is ${couponCode}. You've received a 30 BATH discount on your first purchase.`;
 }
 
 
